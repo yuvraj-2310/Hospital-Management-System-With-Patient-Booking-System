@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+/* 
+.hero{
+  background-image: url('../public/herobg2.jpg');
+  background-size: cover;
+  filter: brightness(50%);
+  filter: blur(3px);
+}
+.hero{
+  background-image: url('../public/herobg2.jpg');
+  background-size: cover;
+  filter: brightness(50%);
+  filter: blur(3px);
+} */
+
+.btn-book:hover{
+  box-shadow: -10px 10px  black;
+  transform: translateX(10px);
+}
+.card:hover{
+  box-shadow: -10px 10px  black;
+  transform: translateX(10px);
+}
+.doctorcard:hover{
+  box-shadow: 10px 10px 100px black;
+  transform: scale(1.03);
+}
+.flyinghero img{
+  animation: flyinghero 2s infinite ease-in-out;
+  filter: drop-shadow(20px 20px 20px);
+}
+@keyframes flyinghero {
+    0%{
+      transform: translateY(12px);
+    }
+    50%{
+      transform: translateY(-12px);
+    }
+    100%{
+      transform: translateY(12px);
+    }  
+}
+
+
+.book-appointment-btn {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  z-index: 1; 
+}
+
+.book-appointment-btn:hover {
+  opacity: 0.8;
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  position: absolute;
+  bottom: 30%;
+  left:40%;
+  z-index: 30;
+  width: 60px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side,#000 90%,#0000);
+  background: 
+    var(--_g) 0%   50%,
+    var(--_g) 50%  50%,
+    var(--_g) 100% 50%;
+  background-size: calc(100%/3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    20%{background-position:0%   0%, 50%  50%,100%  50%}
+    40%{background-position:0% 100%, 50%   0%,100%  50%}
+    60%{background-position:0%  50%, 50% 100%,100%   0%}
+    80%{background-position:0%  50%, 50%  50%,100% 100%}
+}
+.terms-conditions-container,.privacy-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
